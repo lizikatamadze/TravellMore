@@ -1,0 +1,98 @@
+        
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.burger-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    padding: 10px;
+}
+.burger-menu .bar{
+    width: 100%;
+    height: 5px;
+    background-color: #333;
+    transition: 0.3s;
+}
+
+.menu{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #333;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+}
+.menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li{
+    padding: 15px;
+    text-align: center;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.menu ul li:hover{
+    background-color: #444;
+}
+
+.burger-toggle{
+    display: none;
+}
+
+.burger-toggle:checked + .menu{
+    display: block;
+}
+
+.burger-toggle:checked + .menu + .burger-menu .bar:nth-child(1){
+    transform: rotate(45deg);
+    position: relative;
+    top: 10px;
+}
+
+.burger-toggle:checked + .menu + .burger-menu .bar:nth-child(2){
+    opacity: 0;
+}
+
+.burger-toggle:checked + .menu + .burger-menu .bar:nth-child(3){
+    transform: rotate(45deg);
+    position: relative;
+    top: -10px;
+}
+h1{
+    display: flex;
+    align-items: center;
+    margin-top: -43px;
+    margin-left: 120px;
+}  
+img{
+    width: 1950px;
+    height: 868px;
+}    
+h2{
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-top: -450px;
+    margin-left: 690px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+footer{
+    padding: 390px;
+}
